@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_contract_type" table="x_sogd_ciic_ciic" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_contract_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>邮件</label>
+            <language>en</language>
+            <name>x_sogd_ciic_ciic</name>
+            <sequence>0</sequence>
+            <sys_created_by>Fayu.xu</sys_created_by>
+            <sys_created_on>2018-03-01 09:01:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3ffabd0a0fe05b408e6805ace1050e64</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-03-01 09:01:37</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_contract_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>电话</label>
+            <language>en</language>
+            <name>x_sogd_ciic_ciic</name>
+            <sequence>1</sequence>
+            <sys_created_by>Fayu.xu</sys_created_by>
+            <sys_created_on>2018-03-01 09:01:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7ffabd0a0fe05b408e6805ace1050e65</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-03-01 09:01:37</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_contract_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>自助报单</label>
+            <language>en</language>
+            <name>x_sogd_ciic_ciic</name>
+            <sequence>2</sequence>
+            <sys_created_by>Fayu.xu</sys_created_by>
+            <sys_created_on>2018-03-01 09:01:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fbfabd0a0fe05b408e6805ace1050e66</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-03-01 09:01:37</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_contract_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>协助报单</label>
+            <language>en</language>
+            <name>x_sogd_ciic_ciic</name>
+            <sequence>3</sequence>
+            <sys_created_by>Fayu.xu</sys_created_by>
+            <sys_created_on>2018-03-01 09:01:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7bfabd0a0fe05b408e6805ace1050e67</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-03-01 09:01:37</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_contract_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>人肉报单</label>
+            <language>en</language>
+            <name>x_sogd_ciic_ciic</name>
+            <sequence>4</sequence>
+            <sys_created_by>Fayu.xu</sys_created_by>
+            <sys_created_on>2018-03-01 09:01:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f7fabd0a0fe05b408e6805ace1050e68</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-03-01 09:01:37</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_contract_type</element>
+            <name>x_sogd_ciic_ciic</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Fayu.xu</sys_created_by>
+            <sys_created_on>2018-03-01 09:01:37</sys_created_on>
+            <sys_id>3bfabd0a0fe05b408e6805ace1050e65</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_contract_type</sys_name>
+            <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
+            <sys_update_name>sys_choice_x_sogd_ciic_ciic_u_contract_type</sys_update_name>
+            <sys_updated_by>Fayu.xu</sys_updated_by>
+            <sys_updated_on>2018-03-01 09:01:37</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

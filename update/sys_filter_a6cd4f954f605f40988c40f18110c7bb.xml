@@ -12,7 +12,6 @@
         <sys_class_name>sys_filter</sys_class_name>
         <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
         <sys_created_on>2018-02-27 07:07:54</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a6cd4f954f605f40988c40f18110c7bb</sys_id>
@@ -20,13 +19,12 @@
         <sys_name>mobile</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sys_filter_a6cd4f954f605f40988c40f18110c7bb</sys_update_name>
         <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
         <sys_updated_on>2018-02-27 07:07:54</sys_updated_on>
         <table>sp_page</table>
         <title>mobile</title>
-        <user display_value="fayu xu">c14e28a24fd9cb00988c40f18110c7e0</user>
+        <user display_value="Fayu Xu">80541d150f5043008e6805ace1050e34</user>
     </sys_filter>
 </record_update>
