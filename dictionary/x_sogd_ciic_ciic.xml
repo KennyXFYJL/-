@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" label="中智" max_length="40" name="x_sogd_ciic_ciic" type="collection">
+        <element label="Additional comments" max_length="4000" name="comments" type="journal_input"/>
         <element label="被指派人" max_length="32" name="u_assigned_to" reference="sys_user" type="reference"/>
         <element label="被指派组" max_length="32" name="u_assignment_group" reference="sys_user_group" type="reference"/>
         <element label="报单人" max_length="32" name="u_caller" reference="sys_user" type="reference"/>
@@ -151,6 +152,7 @@
         <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="查看名单" max_length="1024" name="u_watch_list" reference="sys_user" type="glide_list"/>
         <element label="工作日志" max_length="4000" name="u_work_notes" type="journal"/>
         <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="工作日志名单" max_length="1024" name="u_work_notes_list" reference="sys_user" type="glide_list"/>
+        <element label="Work Notes" max_length="4000" name="work_notes" type="journal_input"/>
         <index name="index">
             <element name="u_assigned_to"/>
         </index>
