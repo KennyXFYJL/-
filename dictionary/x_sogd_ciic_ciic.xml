@@ -121,6 +121,7 @@
             </choice>
         </element>
         <element label="添加到中智知识库" max_length="40" name="u_knowledge" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="地点" max_length="40" name="u_location" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="优先程度" max_length="40" name="u_priority" type="string">
             <choice>
                 <element label="紧急" sequence="0" value="1"/>
