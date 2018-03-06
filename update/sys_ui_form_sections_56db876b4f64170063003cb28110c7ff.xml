@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="56db876b4f64170063003cb28110c7ff" sys_domain="global" table="x_sogd_ciic_x_sogd_ciic" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
+            <sys_created_on>2018-03-06 06:45:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1edbc76b4f64170063003cb28110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sogd_ciic_x_sogd_ciic" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">56db876b4f64170063003cb28110c7ff</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
+            <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
+            <sys_updated_on>2018-03-06 06:45:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
+            <sys_created_on>2018-03-06 06:45:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1adbc76b4f64170063003cb28110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sogd_ciic_x_sogd_ciic" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">56db876b4f64170063003cb28110c7ff</sys_ui_form>
+            <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
+            <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
+            <sys_updated_on>2018-03-06 06:45:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
+            <sys_created_on>2018-03-06 06:45:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>52dbc76b4f64170063003cb28110c706</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sogd_ciic_x_sogd_ciic" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">56db876b4f64170063003cb28110c7ff</sys_ui_form>
+            <sys_ui_section caption="关单详情" display_value="关单详情" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">5adb876b4f64170063003cb28110c7fe</sys_ui_section>
+            <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
+            <sys_updated_on>2018-03-06 06:45:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_sogd_ciic_x_sogd_ciic</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
+            <sys_created_on>2018-03-06 06:45:45</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>56db876b4f64170063003cb28110c7ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_sogd_ciic_x_sogd_ciic</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
+            <sys_update_name>sys_ui_form_sections_56db876b4f64170063003cb28110c7ff</sys_update_name>
+            <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
+            <sys_updated_on>2018-03-06 06:45:45</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

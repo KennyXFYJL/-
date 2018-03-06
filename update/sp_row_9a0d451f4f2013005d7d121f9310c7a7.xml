@@ -8,11 +8,13 @@
         <sys_class_name>sp_row</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-05 02:53:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>9a0d451f4f2013005d7d121f9310c7a7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sp_row_9a0d451f4f2013005d7d121f9310c7a7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
