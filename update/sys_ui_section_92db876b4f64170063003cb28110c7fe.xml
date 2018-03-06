@@ -5,13 +5,13 @@
             <element>watch_list</element>
             <position>0</position>
             <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>5afb8f6b4f64170063003cb28110c709</sys_id>
+            <sys_created_on>2018-03-06 09:02:32</sys_created_on>
+            <sys_id>ca2bef2f4fa4170063003cb28110c7f6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
             <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
+            <sys_updated_on>2018-03-06 09:02:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>.split</element>
             <position>1</position>
             <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>dafb8f6b4f64170063003cb28110c709</sys_id>
+            <sys_created_on>2018-03-06 09:02:32</sys_created_on>
+            <sys_id>4e2bef2f4fa4170063003cb28110c7f6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
             <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
+            <sys_updated_on>2018-03-06 09:02:32</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>work_notes_list</element>
             <position>2</position>
             <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>5efb8f6b4f64170063003cb28110c709</sys_id>
+            <sys_created_on>2018-03-06 09:02:32</sys_created_on>
+            <sys_id>ce2bef2f4fa4170063003cb28110c7f6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
             <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
+            <sys_updated_on>2018-03-06 09:02:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,55 +47,41 @@
             <element>.end_split</element>
             <position>3</position>
             <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>defb8f6b4f64170063003cb28110c709</sys_id>
+            <sys_created_on>2018-03-06 09:02:32</sys_created_on>
+            <sys_id>422bef2f4fa4170063003cb28110c7f7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
             <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
+            <sys_updated_on>2018-03-06 09:02:32</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>description</element>
+            <element>comments_and_work_notes</element>
             <position>4</position>
             <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>52fb8f6b4f64170063003cb28110c70a</sys_id>
+            <sys_created_on>2018-03-06 09:02:32</sys_created_on>
+            <sys_id>c22bef2f4fa4170063003cb28110c7f7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
             <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>work_notes</element>
-            <position>5</position>
-            <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>d2fb8f6b4f64170063003cb28110c70a</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
-            <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
+            <sys_updated_on>2018-03-06 09:02:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>activity.xml</element>
-            <position>6</position>
+            <position>5</position>
             <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
-            <sys_created_on>2018-03-06 06:46:18</sys_created_on>
-            <sys_id>56fb8f6b4f64170063003cb28110c70a</sys_id>
+            <sys_created_on>2018-03-06 09:02:32</sys_created_on>
+            <sys_id>462bef2f4fa4170063003cb28110c7f7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
             <sys_ui_section caption="日志笔记" display_value="日志笔记" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">92db876b4f64170063003cb28110c7fe</sys_ui_section>
             <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-            <sys_updated_on>2018-03-06 06:46:18</sys_updated_on>
+            <sys_updated_on>2018-03-06 09:02:32</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>

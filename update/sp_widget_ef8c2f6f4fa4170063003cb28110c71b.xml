@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope, $rootScope, $timeout, $http, modelUtil, contextualSearch, contextualFeedback, $log, i18n) {
+	var c = this;
+	var ARIA_MSG_GAP = 1000;
+	var PREVIEW_STR = "Preview";
+	var HELPED_STR = "This helped";
+	$scope.i18n = i18n;
+	c.data.cxs.RESULT_TITLE_ID = 'result_title_';
+	var ariaMsgs = c.data.ariaMsgs;
+	$scope.cxs = c.data.cxs;
+	var cxs = $scope.cxs;  // local pointer to simplify code
+	cxs.trigger = {
+		field: $scope.page.g_form.getField("IO:" + cxs.config.search_variable.value)
+	};
+	cxs.display = {
+		collapsed: false
+	};
+
+	function clearDisplay() {
+		delete(cxs.display.results);
+		delete(cxs.display.result_detail);
+		delete(cxs.display.result_index);
+		delete(cxs.display.result);
+	}
+
+	$scope.getRatingDesc = function(rating) {
+		rating = $scope.getRating(rating);
+		if(rating == 0)
+			return c.data.i18nMsgs.noRating;
+		return i18n.format(c.data.i18nMsgs.rating, $scope.getRating(rating));
+	}
+
+	$scope.getRating = function(rating) {
+		return Math.round(rating || 0);
+	}
+
+	function hasResults(){
+		return cxs.display.results && cxs.display.results.length != 0;
+	}
+
+	$scope.$watch("cxs.trigger.field.stagedValue", function (newValue, oldValue) {
+		if (cxs.trigger.timeout)
+			$timeout.cancel(cxs.trigger.timeout);
+		
+		if (!newValue || newValue.replace(/\s/g,'') === "") {
+			clearDisplay();
+			delete(cxs.response);
+			$scope.setAriaStatus(ariaMsgs.noResultsToDisplay, 0);
+			return;
+		}
+		
+		cxs.trigger.timeout = $timeout(function() {
+			$timeout.cancel(cxs.trigger.timeout);
+			$scope.setAriaStatus(i18n.format(ariaMsgs.searching, newValue), 0);
+			var searchRequest = contextualSearch.newSearchRequest({
+				context: cxs.config.cxs_context_config.value,
+				query: {
+					freetext: newValue
+				},
+				meta: {
+					limit: cxs.config.limit.value,
+					window: {
+						start: 0,
+						end: cxs.config.results_per_page.value
+					},
+					session: cxs.session,
+					includePinnedArticles: true
+				},
+				g_form: $scope.page.g_form
+			});
+			
+			// Submit search request and handle results returned from promise
+			searchRequest.submit().then(
+				function(response) {
+					clearDisplay();
+					cxs.response = response;
+					cxs.display.results = response.results;
+					if(hasResults()) {
+						if($scope.hasMoreResults())
+							$scope.setAriaStatus(ariaMsgs.searchCompleted, ARIA_MSG_GAP);
+						else
+							$scope.setAriaStatus(ariaMsgs.allResultsLoaded, ARIA_MSG_GAP);
+					}
+					else
+						$scope.setAriaStatus(i18n.format(ariaMsgs.noMatchingResults, newValue), ARIA_MSG_GAP);
+				},
+				function(response) {
+					clearDisplay();
+					delete(cxs.response);
+				}
+			);
+		},
+		cxs.property.wait_time);
+	});
+	
+	$scope.getMoreResults = function() {
+		if (!$scope.hasMoreResults())
+			return;
+		// Set limit if request_next exceeds it.
+		if (cxs.response.request_next.meta.window.end > cxs.config.limit.value)
+			cxs.response.request_next.meta.window.end = cxs.config.limit.value;
+		$scope.setAriaStatus(ariaMsgs.loadingMoreResults, 0);
+		cxs.response.request_next.submit().then(
+			function(response) {
+				cxs.response = response;
+				cxs.display.results = cxs.display.results.concat(response.results);
+				if($scope.hasMoreResults())
+					$scope.setAriaStatus(ariaMsgs.resultsLoaded, ARIA_MSG_GAP);
+				else
+					$scope.setAriaStatus(ariaMsgs.allResultsLoaded, ARIA_MSG_GAP);
+			},
+			function(response) {
+				$log.info("BAD");
+			}
+		);
+	};
+	
+	$scope.hasMoreResults = function() {
+		return cxs.response.meta.has_more_results
+			&& cxs.response.request_next.meta.window.start < cxs.config.limit.value;
+	};
+	
+	$scope.displayDetail = function(resultIndex) {
+		if (!cxs.display.results[resultIndex])
+			return;
+		
+		var result = cxs.display.results[resultIndex];
+		if (result._record) {
+			cxs.display.result_index = resultIndex;
+			cxs.display.result_detail = result._record;
+			cxs.display.result = result;
+			$scope.sendFeedback(PREVIEW_STR,cxs.display.result);
+			return;
+		}
+		
+		// Lookup if we haven't already.
+		var id = result.id.split(":");
+		$http.get("/api/now/table/" + id[0] + "?sysparm_display_value=all&sysparm_query=sys_id%3D" + id[1]).then(
+			function(response) {
+				result._record = response.data.result[0];
+				modelUtil.addFriendlyDisplayValueToAll(result._record);
+				cxs.display.result_index = resultIndex;
+				cxs.display.result_detail = result._record;
+				cxs.display.result = result;
+				$scope.sendFeedback(PREVIEW_STR,cxs.display.result);
+			},
+			function(response) {
+				$log.info("BAD II");
+			}
+		);
+	};
+	
+	$scope.toggleExpandCollapse = function() {
+		cxs.display.collapsed = !cxs.display.collapsed;
+	};
+	
+	$scope.getResultTemplate = function(result) {
+		return (result && result.meta.source) ? "cxs-result-" + result.meta.source : "cxs-result-default";
+	};
+	
+	$scope.getDetailTemplate = function() {
+		var result = cxs.display.results[cxs.display.result_index];
+		return (result && result.meta.source) ? "cxs-detail-" + result.meta.source : "cxs-detail-default" ;
+	};
+	
+	$scope.getKBParentCategories = function(result) {
+		if (!result)
+			return;
+		
+		var parentCategories = [];
+		// copy by value. slice() does not work on this array
+		if (result.meta.parentCategories)
+			for (var i = 0; i < result.meta.parentCategories.length; i++)
+			parentCategories.push(result.meta.parentCategories[i]);
+		return parentCategories.reverse().join(' > ');
+	};
+	
+	// Detail navigation
+	$scope.backToResults = function() {
+		delete(cxs.display.result_detail);
+		delete(cxs.display.result_index);
+		delete(cxs.display.result);
+		$scope.onBackToResult();
+	};
+	
+	$scope.toNext = function() {
+		if (cxs.display.result_index >= cxs.display.results.length-1 && $scope.hasMoreResults())
+			$scope.getMoreResults();
+		
+		if ($scope.hasNext())
+			$scope.displayDetail(cxs.display.result_index + 1);	
+	};
+	
+	$scope.toPrev = function() {
+		if ($scope.hasPrev())
+			$scope.displayDetail(cxs.display.result_index - 1);
+	};
+	
+	$scope.hasNext = function() {
+		return cxs.display.result_index < cxs.display.results.length-1 || $scope.hasMoreResults();
+	};
+	
+	$scope.hasPrev = function() {
+		return cxs.display.result_index > 0;
+	};
+	
+	$scope.sendFeedback = function(action_value, result) {
+		if (!result)
+			result = cxs.display.results[cxs.display.result_index];
+		var relevance = true;
+		if(action_value == HELPED_STR)
+			relevance = !$scope.isRelevant(action_value);
+		var feedbackRequest = contextualFeedback.newFeedbackRequest({
+			session: cxs.session,
+			search_request: cxs.response.request,
+			relevant_doc: result.id,
+			relevant_doc_url: result.sp_link || result.link,
+			relevance: action_value,
+			relevant: relevance,
+			score: result.meta['score'],
+            index: cxs.display.result_index,
+			displayed_on: cxs.displayed_on
+		});
+		
+		feedbackRequest.submit().then(
+			function(response) {
+				if (!result.meta.relevance)
+					result.meta.relevance = {};
+				if(action_value == PREVIEW_STR)
+					result.meta.relevance[action_value] = true;
+				else if(action_value == HELPED_STR)
+					result.meta.relevance[action_value] = !$scope.isRelevant(action_value, result);
+			},
+			function(response) {
+				$log.info("BAD III");
+			}
+		);
+	};
+
+	$scope.isRelevant = function(action_value, result) {
+		if (!result)
+			result = cxs.display.results[cxs.display.result_index];
+		return result.meta.relevance && result.meta.relevance[action_value];
+	};
+	
+	$rootScope.$on("$sp.sc_cat_item.submitted", function(event, response){
+        contextualFeedback.link(cxs.session, response.table, response.sys_id);
+    });
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-body { &#13;
+  border: 1px solid #ccc; &#13;
+  border-top-left-radius: 4px; &#13;
+  border-top-right-radius: 4px;&#13;
+  border-bottom-left-radius: 4px; &#13;
+  border-bottom-right-radius: 4px;&#13;
+  padding: 0px 0px 0px 0px;&#13;
+}&#13;
+&#13;
+.margin-bottom {&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.row {&#13;
+  margin: 0px;&#13;
+}&#13;
+&#13;
+.cxs-result-container .col-md-12 {&#13;
+  padding: 16px 0px 16px 0px;&#13;
+}&#13;
+&#13;
+.cxs-result-container .col-md-1 {&#13;
+  width: 3%;&#13;
+}&#13;
+&#13;
+.cxs-result-container .col-md-11 {&#13;
+  width: 97%;&#13;
+}&#13;
+&#13;
+.cxs-detail-container {&#13;
+}&#13;
+&#13;
+.cxs-detail-container .article-content {&#13;
+  overflow-wrap: break-word;&#13;
+  word-wrap: break-word;&#13;
+}&#13;
+&#13;
+.cxs-detail-container .col-md-12 {&#13;
+  padding: 16px;&#13;
+}&#13;
+&#13;
+.cxs-detail-container hr {&#13;
+  margin-top: 6px;&#13;
+  margin-bottom: 16px;&#13;
+}&#13;
+&#13;
+.cxs-results-panel {  &#13;
+  border-top-left-radius: 4px; &#13;
+  border-top-right-radius: 4px;&#13;
+  border-bottom-left-radius: 4px; &#13;
+  border-bottom-right-radius: 4px;&#13;
+  padding: 0px;&#13;
+  &#13;
+  font-family: "SourceSansPro";&#13;
+  font-weight: 400;&#13;
+}&#13;
+&#13;
+.cxs-results-title-bar {&#13;
+  border-top-left-radius: 4px; &#13;
+  border-top-right-radius: 4px;&#13;
+  padding: 6px 12px 6px 12px;&#13;
+  border-bottom: 1px solid #ccc;&#13;
+  background-color: #f5f5f5;&#13;
+}&#13;
+&#13;
+.cxs-results {&#13;
+  padding: 6px 12px 6px 12px;&#13;
+}&#13;
+&#13;
+.cxs-result-snippet {&#13;
+  font-size: 14px;&#13;
+  color: #717171;&#13;
+  overflow-wrap: break-word;&#13;
+  word-wrap: break-word;&#13;
+}&#13;
+&#13;
+.cxs-results-title {&#13;
+  font-size: 14px;&#13;
+  color: #343D47;&#13;
+  font-weight: 600;&#13;
+}&#13;
+&#13;
+.cxs-preview-content {&#13;
+  margin-top: 16px;&#13;
+  border: 1px solid #ccc;&#13;
+  padding: 0px;&#13;
+}&#13;
+&#13;
+span.cxs-result-icon {&#13;
+  padding-right: 8px;&#13;
+}&#13;
+&#13;
+.cxs-result-icon i {&#13;
+  color: #86c0fd;&#13;
+  font-size: 20px;&#13;
+}&#13;
+&#13;
+.cxs-result-icon i.push {&#13;
+	margin-top: 3px;&#13;
+}&#13;
+&#13;
+i.cxs-preview-icon {&#13;
+  font-size: 10px;&#13;
+  color: #343D47;&#13;
+}&#13;
+&#13;
+.cxs-button-order {&#13;
+  border: 1px solid #428bca;&#13;
+  color: #428bca;&#13;
+  font-size: 14px;&#13;
+}&#13;
+&#13;
+.cxs-button-order:hover {&#13;
+  border-color: #2a6496;&#13;
+  color: #2a6496;&#13;
+  background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+.cxs-button-order-pad {&#13;
+  margin-left: 10px;&#13;
+}&#13;
+&#13;
+div.cxs-result-content {&#13;
+  padding: 0px;&#13;
+}&#13;
+&#13;
+div.cxs-result-chrome {&#13;
+  border-bottom: 1px solid #ccc;&#13;
+}&#13;
+&#13;
+.cxs-result-title {&#13;
+  font-weight: 600;&#13;
+  font-size: 16px;&#13;
+  color: #428bca;&#13;
+  overflow-wrap: break-word;&#13;
+  word-wrap: break-word;&#13;
+}&#13;
+&#13;
+.cxs-result-breadcrumbs {&#13;
+  font-size: 13px;&#13;
+  color: #979797;&#13;
+}&#13;
+&#13;
+.cxs-icon-star {&#13;
+  font-size: 10px;&#13;
+  line-height: 18px;&#13;
+  vertical-align: middle;&#13;
+  margin-right: 3px;&#13;
+}&#13;
+&#13;
+.cxs-icon-star-empty {&#13;
+  font-size: 10px;&#13;
+  line-height: 18px;&#13;
+  vertical-align: middle;&#13;
+  margin-right: 3px;&#13;
+}&#13;
+&#13;
+.cxs-action-button-icon {&#13;
+  font-size: 16px;&#13;
+  vertical-align: middle;&#13;
+}&#13;
+&#13;
+.cxs-meta-row {&#13;
+   line-height: 0.8;&#13;
+}&#13;
+&#13;
+.cxs-ec-chevron {&#13;
+    font-size: 12px;&#13;
+}&#13;
+&#13;
+.cxs-meta_row .cxs-article-info {&#13;
+  display: block;&#13;
+}&#13;
+&#13;
+.cxs-preview {&#13;
+  color: #343D47;&#13;
+}&#13;
+&#13;
+ul.cxs-article-info {&#13;
+  padding: 0px;&#13;
+  margin: 4px 0px 0px 0px;&#13;
+  font-size: 13px;&#13;
+}&#13;
+&#13;
+ul.cxs-article-info &gt; li:first-child {&#13;
+  margin-left: 0px;&#13;
+}&#13;
+&#13;
+ul.cxs-article-info li {&#13;
+  margin-right: 0px;&#13;
+  margin-left: 0px;&#13;
+  display: inline;&#13;
+}&#13;
+&#13;
+.cxs-article-info li::before {&#13;
+  content: "\2022"&#13;
+}&#13;
+&#13;
+ul.cxs-article-info &gt; li:first-child::before {&#13;
+  content: ""&#13;
+}&#13;
+&#13;
+ul.cxs-article-info &gt; li:first-child span.cxs-article-label {&#13;
+  margin-left: 0px;&#13;
+}&#13;
+&#13;
+.cxs-article-label {&#13;
+  margin-left: 0px;&#13;
+  margin-right: 0px;&#13;
+}&#13;
+&#13;
+.cxs-article-value {&#13;
+  margin-left: 0px;&#13;
+  margin-right: 0px;&#13;
+}&#13;
+&#13;
+.cxs-rating-readonly {&#13;
+  height: 18px;&#13;
+  line-height: 18px;&#13;
+  display: inline-block;&#13;
+}&#13;
+&#13;
+.b {&#13;
+  border: 0px solid transparent&#13;
+}&#13;
+&#13;
+div.cxs-result-title, div.cxs-meta-row {&#13;
+  padding-bottom: 8px;&#13;
+}&#13;
+&#13;
+.cxs-button-bar {&#13;
+  height: 45px;&#13;
+  line-height: 45px;&#13;
+  white-space: nowrap;&#13;
+}&#13;
+&#13;
+.cxs-button-bar button {&#13;
+	vertical-align: middle;&#13;
+}&#13;
+&#13;
+.cxs-results-button-bar {&#13;
+  height: 45px;&#13;
+  line-height: 45px;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+button.cxs-hlp-btn {&#13;
+  line-height: 16px;&#13;
+  margin: 0px 0px 3px 0px;&#13;
+}&#13;
+&#13;
+span.cxs-hlp-btn-label {&#13;
+  vertical-align: middle;&#13;
+  font-size: 14px;&#13;
+}&#13;
+&#13;
+span.cxs-results-vcr {&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+i:before {&#13;
+  vertical-align: baseline;&#13;
+}&#13;
+&#13;
+img.cxs-result-image, img.cxs-record-image {&#13;
+  width: 100%;&#13;
+}&#13;
+&#13;
+.icon-star {&#13;
+  color: gold;&#13;
+  font-size: 10px;&#13;
+}&#13;
+&#13;
+.icon-star-empty {&#13;
+  color: #343D47;&#13;
+  font-size: 10px;&#13;
+}&#13;
+&#13;
+.panel-heading { display: none; }&#13;
+&#13;
+.side-box {&#13;
+  margin: 0 0;&#13;
+  border: #bdc0c4 1px solid;&#13;
+}&#13;
+&#13;
+.side-box .box {&#13;
+  padding: 5px;&#13;
+  display: inline-block;&#13;
+  width: 49%;&#13;
+}&#13;
+&#13;
+.side-box .box:nth-child(2) {&#13;
+  border-left: #bdc0c4 1px solid;&#13;
+}&#13;
+&#13;
+.side-box .box .number-box {&#13;
+  direction: ltr;&#13;
+  padding-top: 2px;&#13;
+  padding-bottom: 2px;&#13;
+  font-size: 20px;&#13;
+  text-align: center;&#13;
+  color: #000000;&#13;
+}&#13;
+&#13;
+.side-box .box .text-box {&#13;
+  font-size: 11px;&#13;
+  color: #bdc0c4;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+.btn-icon {&#13;
+  background: none;&#13;
+  padding: 3px;&#13;
+  border: none;&#13;
+  border-top-color: initial;&#13;
+  border-top-style: none;&#13;
+  border-top-width: initial;&#13;
+  border-right-color: initial;&#13;
+  border-right-style: none;&#13;
+  border-right-width: initial;&#13;
+  border-bottom-color: initial;&#13;
+  border-bottom-style: none;&#13;
+  border-bottom-width: initial;&#13;
+  border-left-color: initial;&#13;
+  border-left-style: none;&#13;
+  border-left-width: initial;&#13;
+  border-image-source: initial;&#13;
+  border-image-slice: initial;&#13;
+  border-image-width: initial;&#13;
+  border-image-outset: initial;&#13;
+  border-image-repeat: initial;&#13;
+}&#13;
+&#13;
+.cxs-preview-button {&#13;
+  font-size: 20px;&#13;
+  color: #343D47;&#13;
+}&#13;
+&#13;
+.cxs-lozenge {&#13;
+  color: white;&#13;
+  font-size: 11px;&#13;
+  background-color: #3d89cb;&#13;
+  padding: 2px 6px 2px 6px;&#13;
+  margin-left: 10px;&#13;
+  border-radius: 5px;&#13;
+}&#13;
+&#13;
+.cxs-record-short-description {&#13;
+  overflow-wrap: break-word;&#13;
+  word-wrap: break-word; &#13;
+}&#13;
+&#13;
+#sp_cxs_aria_status {&#13;
+	font-size:0px !important;&#13;
+}&#13;
+&#13;
+.cxs-aria-status {&#13;
+	border: 1px solid #bdc0c4;&#13;
+	padding: 10px;&#13;
+	min-height: 1em;&#13;
+	text-align: center;&#13;
+}&#13;
+&#13;
+.sp-cxs-a11y {&#13;
+&#13;
+	.cxs-result-breadcrumbs span, .number-box, .text-box {&#13;
+		color: #777474 !important;&#13;
+	}&#13;
+	.cxs-lozenge {&#13;
+		background-color: #006ee0 !important;&#13;
+	}&#13;
+&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>This provides contextual search functionality for Service Portal</description>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>cxs-inline-results-widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function($scope, el, attr) {
+	var focusId;
+	$(el).on('click', '.cxs-result-title>a', function($event) {
+		focusId = $(this).attr('id');
+	});
+
+	$scope.onBackToResult = function() {
+		setTimeout(function() {
+			$('#' + focusId).focus();
+		}, 500);
+	};
+
+	/*
+		we can use angular expressions for the below funtionalities. But JAWS is reading angular expressions on live regions.
+		so we are manipulating directly DOM.
+	*/
+	var timerPromise;
+	$scope.cxs.ariaStatus = '';
+	var $timeout = $injector.get('$timeout');
+	function updateAriaStatus(msg) {
+		var target = $(el).find('#sp_cxs_aria_status')[0];
+		$scope.cxs.ariaStatus = msg; 
+		target.innerHTML = '<div class="sr-only">' +$('<div>', { text:msg }).html() + '</div>';
+	}
+
+	$scope.setAriaStatus = function(msg, delay) {
+		delay = delay || 0;
+		if(delay == 0 || timerPromise)
+			$timeout.cancel(timerPromise);
+
+		(function(val) {
+			timerPromise = $timeout(function() {
+				timerPromise = undefined;
+				updateAriaStatus(val);
+		}, delay);})(msg);
+	}
+
+	$scope.setAriaStatus(scope.c.data.ariaMsgs.noResultsToDisplay);
+}]]></link>
+        <name>Contextual Search - Inline Results</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.cxs = {
+		session: gs.generateGUID(),
+		displayed_on: "record_producer:" + $sp.getParameter("sys_id"),
+		config: new sn_cxs.CXSUIConfig().getRPConfig($sp.getParameter("sys_id")),
+	    property: {
+			show_meta_data: gs.getProperty("com.snc.contextual_search.widget.form.show_meta_data", false) == "true" || false,
+			wait_time: parseInt(gs.getProperty("com.snc.contextual_search.wait_time", 500))
+		},
+		kb_property: {
+			show_author: (gs.getProperty("glide.knowman.search.show_author", false) == "true" || false),
+			show_article_number: (gs.getProperty("glide.knowman.search.show_article_number", false) == "true" || false),
+			show_category: (gs.getProperty("glide.knowman.search.show_category", false) == "true" || false),
+			show_relevance: (gs.getProperty("glide.knowman.search.show_relevancy", false) == "true" || false),
+			show_last_modified: (gs.getProperty("glide.knowman.search.show_last_modified", false) =="true" || false),
+			show_published: (gs.getProperty("glide.knowman.search.show_published", false) == "true" || false),
+			show_unpublished: (gs.getProperty("glide.knowman.show_unpublished", false) == "true" || false),
+			show_view_count: (gs.getProperty("glide.knowman.search.show_view_count", false) == "true" || false),
+			show_rating: (gs.getProperty("glide.knowman.search.show_rating", false) == "true" || false)
+		}
+	};
+	var i18nMsgs = {
+		noRating: gs.getMessage("No rating"),
+		rating: gs.getMessage("{0} star rating"),
+		views: gs.getMessage("{0} views"),
+		view: gs.getMessage("{0} view"),
+		catalog: {
+			order: gs.getMessage("Navigates to {0} catalog page")
+		}
+	};
+	var ariaMsgs = {
+		searchCompleted: gs.getMessage("Showing search results"),
+		searching: gs.getMessage("Searching for {0}"),
+		loadingMoreResults: gs.getMessage("Loading more results"),
+		resultsLoaded: gs.getMessage("More results loaded"),
+		allResultsLoaded: gs.getMessage("Showing all search results"),
+		noMatchingResults: gs.getMessage("No matching results found for {0}"),
+		noResultsToDisplay: gs.getMessage("No results to display")
+	};
+	data.ariaMsgs = ariaMsgs;
+	data.i18nMsgs = i18nMsgs;
+	data.isA11yEnabled = GlideAccessibility.isEnabled();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
+        <sys_created_on>2018-03-06 09:12:23</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ef8c2f6f4fa4170063003cb28110c71b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Contextual Search - Inline Results</sys_name>
+        <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
+        <sys_update_name>sp_widget_ef8c2f6f4fa4170063003cb28110c71b</sys_update_name>
+        <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
+        <sys_updated_on>2018-03-06 09:12:23</sys_updated_on>
+        <template><![CDATA[<sp-panel ng-if="cxs.response" class="cxs-results-panel" ng-class = "::{'sp-cxs-a11y': c.data.isA11yEnabled}">
+  <div class="cxs-results-title-bar" ng-click="cxs.config.allow_expand_collapse.value && toggleExpandCollapse()"
+       ng-attr-aria-expanded="{{cxs.config.allow_expand_collapse.value ? !cxs.display.collapsed : true}}"
+       ng-attr-aria-disabled="{{cxs.config.allow_expand_collapse.value ? false : true}}">
+     <span class="cxs-results-title">
+       {{cxs.config.results_header_text.display_value}}&nbsp;
+       <i ng-class="['cxs-ec-chevron','fa',{'fa-chevron-down': cxs.display.collapsed, 'fa-chevron-up': !cxs.display.collapsed}]" ng-if="cxs.config.allow_expand_collapse.value"></i>
+    </span>
+  </div>
+  <div ng-show="!cxs.display.result_detail && cxs.display.results && !cxs.display.collapsed" class="cxs-results">
+    <div ng-repeat="result in cxs.display.results" class="m-b">
+      <ng-include src="getResultTemplate(result)" />
+    </div>
+    <div class="row cxs-results-button-bar col-md-12" ng-if="hasMoreResults()">
+      <button class="btn btn-default margin-bottom" ng-click="getMoreResults()" aria-label = "${Shows more search results}">${Show more}</button>
+    </div>
+    <!-- Display message if no Search Results returned -->
+    <div ng-if="(!cxs.display.results || cxs.display.results.length == 0)">
+      ${No matching results found for {{cxs.response.request.query.freetext}}}
+    </div>
+  </div>
+  <!-- Display Search Result Detail -->
+  <div ng-if="cxs.display.result_detail && !cxs.display.collapsed"  class="cxs-individual-result">
+    <div><ng-include src="'cxs-detail-header'" /></div>
+    <div class="row col-md-12 cxs-record">
+  		<ng-include src="getDetailTemplate()" />
+	</div>
+  </div>
+</sp-panel>
+<!-- Start - Accessibility specific DOM -->
+<div ng-if="::c.data.isA11yEnabled" class = "cxs-results-panel cxs-aria-status"
+     ng-class="(c.data.isA11yEnabled && !cxs.response) ? 'cxs-results-panel cxs-aria-status' : 'sr-only'">
+  {{cxs.ariaStatus}}
+</div>
+<!-- 
+	if we use any of the angular expression for 2 way binding in this live region,
+	then screen readers are not reading correctly. so going to raw mode
+	JAWS : reading angular expressions
+	Voiceover : After usage of some time ( 5 to 10 min) , stops reading the content.
+-->
+	<div id='sp_cxs_aria_status' aria-live="assertive" aria-atomic = "true">
+	</div>
+<!--End - Accessibility specific DOM -->
+<style>
+@media screen and (max-width: 992px) {
+  div.cxs-result-icon.col-md-1 {
+    display: none;
+  }
+  .cxs-wide-action {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  span.cxs-result-icon {
+  	display: none;
+  }
+    .cxs-narrow-action {
+    display: none;
+  }
+}
+</style>]]></template>
+    </sp_widget>
+</record_update>
