@@ -5,7 +5,7 @@
         <availability>on_both</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category display_value="Can We help you ? -CIIC">c70fa3ef4fa4170063003cb28110c738</category>
+        <category display_value="我们能帮您吗？">8614276b4fa4170063003cb28110c7ea</category>
         <cost>0</cost>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
@@ -70,7 +70,7 @@ current.description = producer.comments;]]></script>
         <sys_created_on>2018-03-06 08:30:35</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>9381efe74fa4170063003cb28110c7eb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>中智开单</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
@@ -78,7 +78,7 @@ current.description = producer.comments;]]></script>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sc_cat_item_producer_9381efe74fa4170063003cb28110c7eb</sys_update_name>
         <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
-        <sys_updated_on>2018-03-06 09:20:17</sys_updated_on>
+        <sys_updated_on>2018-03-06 09:34:22</sys_updated_on>
         <table_name>x_sogd_ciic_x_sogd_ciic</table_name>
         <template/>
         <type>item</type>
