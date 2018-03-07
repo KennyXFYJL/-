@@ -97,7 +97,7 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="关单摘要" max_length="40" name="u_closed_code" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="联系电话" max_length="40" name="u_contract_phone" type="string"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="5" label="工单来源" max_length="40" name="u_contract_type" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="3" label="工单来源" max_length="40" name="u_contract_type" type="string">
             <choice>
                 <element label="邮件报单" sequence="0" value="1"/>
                 <element label="电话报单" sequence="1" value="2"/>
