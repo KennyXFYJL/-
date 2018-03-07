@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_both</availability>
+        <billable>false</billable>
+        <can_cancel>true</can_cancel>
+        <category display_value="我们能帮到您吗？">e0c9fbef4fac13005d7d121f9310c725</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p><span style="color: #808080; font-family: arial, helvetica, sans-serif; font-size: medium; white-space: pre-line;">提交您遇到的问题&#xff0c;事件成功记录并提交后&#xff0c;您可以随时查询进度。</span></p>]]></description>
+        <entitlement_script/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>中智开单</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>200</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=3fd78ff34f6453005d7d121f9310c777&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <redirect_url>generated_record</redirect_url>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <script><![CDATA[var isMobile = GlideMobileExtensions.getDeviceType() == 'm';
+var link = isMobile ? '#/!list/incident/q:active=true%5Ecaller_id=javascript:gs.user_id()%5EEQ' : 'home.do';
+
+var linkLbl = isMobile ? "List" : "Homepage";
+var br = '<br/>';
+var linkURL = '<a href="' + link + '">' + gs.getMessage(linkLbl) + '</a>';
+var msgArgs = [br, linkURL];
+
+var info = "This incident was opened on your behalf{0}The IT department will contact you if they need any further information{0}You can track status from this {1} {0}";
+
+gs.addInfoMessage(gs.getMessage(info,msgArgs));
+
+current.contact_type = 'self-service';
+current.caller_id = gs.getUserID();
+if (producer.comments.length > 80)
+	current.short_description = producer.comments.substring(0, 79);
+else
+	current.short_description = producer.comments;]]></script>
+        <short_description>创建一个事件反应您请求或故障，并协助解决您的问题。</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-07 01:13:00</sys_created_on>
+        <sys_id>3fd78ff34f6453005d7d121f9310c777</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>中智开单</sys_name>
+        <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
+        <sys_update_name>sc_cat_item_producer_3fd78ff34f6453005d7d121f9310c777</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-07 01:14:14</sys_updated_on>
+        <table_name>x_sogd_ciic_x_sogd_ciic</table_name>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view>cci</view>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=3fd78ff34f6453005d7d121f9310c777"/>
+    <fx_price action="delete_multiple" query="id=3fd78ff34f6453005d7d121f9310c777"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="CNY">CNY</currency>
+        <field>price</field>
+        <id>3fd78ff34f6453005d7d121f9310c777</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-07 01:13:00</sys_created_on>
+        <sys_id>7d49cf774f6453005d7d121f9310c7cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-07 01:13:00</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="CNY">CNY</currency>
+        <field>recurring_price</field>
+        <id>3fd78ff34f6453005d7d121f9310c777</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-07 01:13:00</sys_created_on>
+        <sys_id>b549cf774f6453005d7d121f9310c7cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-07 01:13:00</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

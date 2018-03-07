@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="task" label="中智" max_length="40" name="x_sogd_ciic_x_sogd_ciic" type="collection">
+    <element audit="true" extends="task" label="中智" max_length="40" name="x_sogd_ciic_x_sogd_ciic" sizeclass="1" type="collection">
         <element label="联系人" max_length="32" name="u_caller" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="分类一" max_length="40" name="u_cat1" type="string">
             <choice>

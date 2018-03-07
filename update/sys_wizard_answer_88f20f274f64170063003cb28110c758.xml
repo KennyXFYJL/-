@@ -10,19 +10,17 @@
         <next_question/>
         <order>100</order>
         <payload_name/>
-        <question display_value="Task" name="Task">448f16a54f013200674746028110c702</question>
+        <question display_value="Task" name="Task">d5a3aa77b8130300651775b34d8f5119</question>
         <roles/>
         <script/>
         <sys_class_name>sys_wizard_answer</sys_class_name>
         <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
         <sys_created_on>2018-03-06 06:06:49</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>88f20f274f64170063003cb28110c758</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>中智</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sys_wizard_answer_88f20f274f64170063003cb28110c758</sys_update_name>
         <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>

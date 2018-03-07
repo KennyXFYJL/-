@@ -33,33 +33,32 @@ $text-muted: #646567;
         <quick_start_config/>
         <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
         <sc_catalog_page/>
+        <sc_category_page/>
         <sp_chat_queue/>
         <sp_rectangle_menu display_value="SP Header Menu">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
         <sqanda_knowledge_base display_value="Social QA">5c45a3a0d712120023c84f80de61038b</sqanda_knowledge_base>
         <sys_class_name>sp_portal</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-02 08:16:53</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>d5b8f29a4f6c13005d7d121f9310c72c</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>中智</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sp_portal_d5b8f29a4f6c13005d7d121f9310c72c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2018-03-05 02:35:40</sys_updated_on>
-        <theme display_value="">f84873986711320023c82e08f585ef6a</theme>
+        <theme display_value="Stock - High Contrast">f84873986711320023c82e08f585ef6a</theme>
         <title>中智</title>
         <url_suffix>ciic</url_suffix>
     </sp_portal>
     <sys_translated_text action="delete_multiple" query="documentkey=d5b8f29a4f6c13005d7d121f9310c72c"/>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#e79a3</average_image_color>
+        <chunk_size_bytes/>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
-        <encryption_context/>
         <file_name>icon</file_name>
         <image_height>15</image_height>
         <image_width>15</image_width>
@@ -94,9 +93,9 @@ $text-muted: #646567;
     </sys_attachment_doc>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#e79a3</average_image_color>
+        <chunk_size_bytes/>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
-        <encryption_context/>
         <file_name>logo</file_name>
         <image_height>503</image_height>
         <image_width>504</image_width>

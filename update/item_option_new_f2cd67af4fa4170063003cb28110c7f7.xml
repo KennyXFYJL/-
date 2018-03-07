@@ -3,7 +3,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="中智开单">9381efe74fa4170063003cb28110c7eb</cat_item>
+        <cat_item/>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -18,6 +18,7 @@
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
+        <example_text/>
         <field/>
         <global>false</global>
         <help_tag>更多信息</help_tag>
@@ -58,13 +59,11 @@
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
         <sys_created_on>2018-03-06 09:17:22</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_id>f2cd67af4fa4170063003cb28110c7f7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>请在下面描述您的问题</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>item_option_new_f2cd67af4fa4170063003cb28110c7f7</sys_update_name>
         <sys_updated_by>fayu.xu@sogservice.com.cn</sys_updated_by>
@@ -86,4 +85,39 @@
         <write_roles/>
     </item_option_new>
     <sys_translated_text action="delete_multiple" query="documentkey=f2cd67af4fa4170063003cb28110c7f7"/>
+    <fx_price action="delete_multiple" query="id=f2cd67af4fa4170063003cb28110c7f7"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price_if_checked</field>
+        <id>f2cd67af4fa4170063003cb28110c7f7</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-07 00:50:32</sys_created_on>
+        <sys_id>fc244fb34f6453005d7d121f9310c794</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-07 00:50:32</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_price_if_checked</field>
+        <id>f2cd67af4fa4170063003cb28110c7f7</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-07 00:50:32</sys_created_on>
+        <sys_id>b4248ff34f6453005d7d121f9310c771</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-07 00:50:32</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
 </record_update>
