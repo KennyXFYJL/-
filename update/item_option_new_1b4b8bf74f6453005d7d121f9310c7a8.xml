@@ -10,7 +10,7 @@
         <choice_table>x_sogd_ciic_x_sogd_ciic</choice_table>
         <create_roles/>
         <default_html_value/>
-        <default_value>自助报单</default_value>
+        <default_value>3</default_value>
         <delete_roles/>
         <delivery_plan/>
         <description/>
@@ -60,14 +60,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-07 01:27:16</sys_created_on>
         <sys_id>1b4b8bf74f6453005d7d121f9310c7a8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>开单类别</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>item_option_new_1b4b8bf74f6453005d7d121f9310c7a8</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-07 01:43:47</sys_updated_on>
+        <sys_updated_by>Fayu.xu</sys_updated_by>
+        <sys_updated_on>2018-03-07 07:52:56</sys_updated_on>
         <table/>
         <tooltip/>
         <type>5</type>

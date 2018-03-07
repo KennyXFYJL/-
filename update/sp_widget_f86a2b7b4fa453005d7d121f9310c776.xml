@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
-        <category>custom</category>
         <client_script><![CDATA[function ($scope, spUtil, $rootScope, $location) {
 	var bc = [{label: $scope.page.title, url: '?id=' + $scope.data.sc_catalog_page}];
 	if ($scope.data.category)
@@ -72,20 +71,20 @@
 	if (options && options.sys_id)
 		data.category_id = options.sys_id;
 
-	data.sc_catalog_page = $sp.getDisplayValue("中智") || "ciic_home";
+	data.sc_catalog_page = $sp.getDisplayValue("sc_catalog_page") || "sc_home";
 	// Does user have permission to see this category?
-	if (!$sp.canReadRecord("ciic_it_support", data.category_id)) {
+	if (!$sp.canReadRecord("sc_category", data.category_id)) {
 		data.error = "You do not have permission to see this category";
 		return;
 	} 
 
-	var cat = new GlideRecord('ciic_it_support');
+	var cat = new GlideRecord('sc_category');
 	cat.get(data.category_id);
 	data.category = cat.getDisplayValue('title');
 	var items = data.items = [];
 	var sc = new GlideRecord('sc_cat_item_category');
 	if (data.category_id) 
-		sc.addQuery('ciic_it_support', data.category_id);
+		sc.addQuery('sc_category', data.category_id);
 
 	sc.addQuery('sc_cat_item.active',true);
 	sc.addQuery('sc_cat_item.sys_class_name', 'NOT IN', 'sc_cat_item_wizard');
@@ -106,7 +105,7 @@
 		item.page = 'sc_cat_item';
 		if (item.sys_class_name == 'sc_cat_item_guide')
 			item.page = 'sc_cat_item_guide';
-		else if (item.sys_class_name == '中智开单') {
+		else if (item.sys_class_name == 'sc_cat_item_content') {
 			$sp.getRecordValues(item, gr, 'url,content_type,kb_article');
 			if (item.content_type == 'kb') {
 				item.page = 'kb_article';
@@ -126,14 +125,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-07 03:37:40</sys_created_on>
         <sys_id>f86a2b7b4fa453005d7d121f9310c776</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>中智</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sp_widget_f86a2b7b4fa453005d7d121f9310c776</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-07 04:05:01</sys_updated_on>
+        <sys_updated_by>Fayu.xu</sys_updated_by>
+        <sys_updated_on>2018-03-07 07:15:37</sys_updated_on>
         <template><![CDATA[<div>
   <h4 ng-if="data.error">{{data.error}}</h4>
   <div ng-init="spSearch.targetCatalog()">

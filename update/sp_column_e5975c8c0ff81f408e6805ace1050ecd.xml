@@ -3,22 +3,22 @@
     <sp_column action="INSERT_OR_UPDATE">
         <class_name/>
         <order>1</order>
-        <size>12</size>
+        <size>3</size>
         <size_lg/>
         <size_sm/>
         <size_xs/>
-        <sp_row display_value="1">238c2b7b4fa453005d7d121f9310c77b</sp_row>
+        <sp_row display_value="1">e9975c8c0ff81f408e6805ace1050ecb</sp_row>
         <sys_class_name>sp_column</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-03-07 03:47:08</sys_created_on>
-        <sys_id>6b8c2b7b4fa453005d7d121f9310c77c</sys_id>
+        <sys_created_by>Fayu.xu</sys_created_by>
+        <sys_created_on>2018-03-07 06:55:09</sys_created_on>
+        <sys_id>e5975c8c0ff81f408e6805ace1050ecd</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
-        <sys_update_name>sp_column_6b8c2b7b4fa453005d7d121f9310c77c</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-07 03:47:08</sys_updated_on>
+        <sys_update_name>sp_column_e5975c8c0ff81f408e6805ace1050ecd</sys_update_name>
+        <sys_updated_by>Fayu.xu</sys_updated_by>
+        <sys_updated_on>2018-03-07 06:55:09</sys_updated_on>
     </sp_column>
 </record_update>

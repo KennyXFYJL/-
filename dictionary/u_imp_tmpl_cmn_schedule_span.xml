@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Imp Tmpl Cmn Schedule Span" max_length="40" name="u_imp_tmpl_cmn_schedule_span" type="collection">
+        <element attributes="import_attribute_name=All day,edge_encryption_enabled=true" label="All day" max_length="40" name="u_all_day" type="string"/>
+        <element attributes="import_attribute_name=End date time,edge_encryption_enabled=true" label="End date time" max_length="40" name="u_end_date_time" type="string"/>
+        <element attributes="import_attribute_name=Float day,edge_encryption_enabled=true" label="Float day" max_length="40" name="u_float_day" type="string"/>
+        <element attributes="import_attribute_name=Float week,edge_encryption_enabled=true" label="Float week" max_length="40" name="u_float_week" type="string"/>
+        <element attributes="import_attribute_name=Month" label="Month" max_length="40" name="u_month" type="integer"/>
+        <element attributes="import_attribute_name=Monthly type,edge_encryption_enabled=true" label="Monthly type" max_length="40" name="u_monthly_type" type="string"/>
+        <element attributes="import_attribute_name=Name,edge_encryption_enabled=true" label="Name" max_length="80" name="u_name" type="string"/>
+        <element attributes="import_attribute_name=Notes,edge_encryption_enabled=true" label="Notes" max_length="1000" name="u_notes" type="string"/>
+        <element attributes="import_attribute_name=Overridden Start Date" label="Overridden Start Date" max_length="40" name="u_overridden_start_date" type="integer"/>
+        <element attributes="import_attribute_name=Repeat on,edge_encryption_enabled=true" label="Repeat on" max_length="40" name="u_repeat_on" type="string"/>
+    </element>
+</database>
