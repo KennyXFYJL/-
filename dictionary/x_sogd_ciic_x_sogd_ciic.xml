@@ -113,7 +113,7 @@
             <choice>
                 <element label="新建" sequence="0" value="1"/>
                 <element label="进行中" sequence="1" value="2"/>
-                <element label="等待备件" sequence="2" value="3"/>
+                <element label="等待" sequence="2" value="3"/>
                 <element label="完成" sequence="3" value="4"/>
                 <element label="关闭" sequence="4" value="5"/>
                 <element label="取消" sequence="5" value="6"/>
