@@ -5,13 +5,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>e6a0a1584fb013005d7d121f9310c7e2</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4d39e19c4fb013005d7d121f9310c794</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>u_caller</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>6aa0a1584fb013005d7d121f9310c7e2</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c139e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>u_contract_phone</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>eaa0a1584fb013005d7d121f9310c7e2</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4539e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>u_cat1</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>6ea0a1584fb013005d7d121f9310c7e2</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c539e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>u_cat2</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>eea0a1584fb013005d7d121f9310c7e2</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4939e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -75,13 +75,13 @@
             <element>u_cat3</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>62a0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c939e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -89,13 +89,13 @@
             <element>sys_created_by</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>e2a0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4d39e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -103,223 +103,195 @@
             <element>sys_updated_by</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>66a0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>cd39e19c4fb013005d7d121f9310c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>approval</element>
-            <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>e6a0a1584fb013005d7d121f9310c7e3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>9</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>6aa0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4139e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_contract_type</element>
-            <position>10</position>
+            <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>eaa0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c139e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_state</element>
-            <position>11</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>6ea0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4539e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>impact</element>
-            <position>12</position>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>eea0a1584fb013005d7d121f9310c7e3</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c539e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>priority</element>
-            <position>13</position>
+            <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>62a0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4939e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assignment_group</element>
-            <position>14</position>
+            <position>13</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>e2a0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c939e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assigned_to</element>
-            <position>15</position>
+            <position>14</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>66a0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4d39e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_created_on</element>
-            <position>16</position>
+            <position>15</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>e6a0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>cd39e19c4fb013005d7d121f9310c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_updated_on</element>
-            <position>17</position>
+            <position>16</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>6aa0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4139e19c4fb013005d7d121f9310c797</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>approval_set</element>
-            <position>18</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>eaa0a1584fb013005d7d121f9310c7e4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>19</position>
+            <position>17</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>6ea0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c139e19c4fb013005d7d121f9310c797</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>short_description</element>
-            <position>20</position>
+            <position>18</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>eea0a1584fb013005d7d121f9310c7e4</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4539e19c4fb013005d7d121f9310c797</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>description</element>
-            <position>21</position>
+            <position>19</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>62a0a1584fb013005d7d121f9310c7e5</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>c539e19c4fb013005d7d121f9310c797</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>cxs_table_search.xml</element>
-            <position>22</position>
+            <position>20</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-03-08 06:52:55</sys_created_on>
-            <sys_id>e2a0a1584fb013005d7d121f9310c7e5</sys_id>
+            <sys_created_on>2018-03-08 07:30:12</sys_created_on>
+            <sys_id>4939e19c4fb013005d7d121f9310c797</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Contextual Search Results">11eb1622eb1121003623666cd206fe56</sys_ui_formatter>
             <sys_ui_section caption="NULL" display_value="" name="x_sogd_ciic_x_sogd_ciic" sys_domain="global" view="Default view">c4134f274f64170063003cb28110c756</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-03-08 06:52:55</sys_updated_on>
+            <sys_updated_on>2018-03-08 07:30:12</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>

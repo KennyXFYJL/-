@@ -3,9 +3,9 @@
     <sp_instance_link action="INSERT_OR_UPDATE">
         <active>true</active>
         <class_name/>
-        <color>default</color>
+        <color>warning</color>
         <css/>
-        <glyph/>
+        <glyph>child</glyph>
         <id/>
         <kb_article/>
         <kb_category/>
@@ -16,25 +16,30 @@
         <sc_category/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="2">1a0d451f4f2013005d7d121f9310c7aa</sp_column>
-        <sp_page/>
+        <sp_column display_value="2">11c9699c4fb013005d7d121f9310c73d</sp_column>
+        <sp_page display_value="ciic_it_support">a32bdfff4f6453005d7d121f9310c765</sp_page>
         <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
         <sys_class_name>sp_instance_link</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-03-08 07:27:40</sys_created_on>
-        <sys_id>33986d5c4fb013005d7d121f9310c755</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_created_on>2018-03-08 07:35:38</sys_created_on>
+        <sys_id>687a699c4fb013005d7d121f9310c745</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>zhongzhikaidan</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
-        <sys_update_name>sp_instance_link_33986d5c4fb013005d7d121f9310c755</sys_update_name>
+        <sys_update_name>sp_instance_link_687a699c4fb013005d7d121f9310c745</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-08 07:27:40</sys_updated_on>
-        <title/>
+        <sys_updated_on>2018-03-08 07:37:50</sys_updated_on>
+        <title>zhongzhikaidan</title>
         <type>page</type>
         <url/>
-        <widget_parameters/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
     </sp_instance_link>
-    <sys_translated_text action="delete_multiple" query="documentkey=33986d5c4fb013005d7d121f9310c755"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=687a699c4fb013005d7d121f9310c745"/>
 </record_update>
