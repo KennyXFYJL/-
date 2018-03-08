@@ -8,7 +8,6 @@
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_sogd_ciic_user</name>
-        <scoped_admin>false</scoped_admin>
         <suffix/>
         <sys_class_name>sys_user_role</sys_class_name>
         <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
