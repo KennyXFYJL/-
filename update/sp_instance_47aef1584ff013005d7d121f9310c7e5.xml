@@ -12,22 +12,22 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">e19ce45c4f3013005d7d121f9310c774</sp_column>
-        <sp_widget display_value="LegalFooter">64407ec3532332000d620d0323dc3436</sp_widget>
+        <sp_widget display_value="CIICFooter">4e3731544ff013005d7d121f9310c7ec</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-03-08 03:18:51</sys_created_on>
-        <sys_id>cbaf60dc4f3013005d7d121f9310c7c8</sys_id>
+        <sys_created_on>2018-03-08 09:04:01</sys_created_on>
+        <sys_id>47aef1584ff013005d7d121f9310c7e5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
-        <sys_update_name>sp_instance_cbaf60dc4f3013005d7d121f9310c7c8</sys_update_name>
+        <sys_update_name>sp_instance_47aef1584ff013005d7d121f9310c7e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-08 03:18:51</sys_updated_on>
+        <sys_updated_on>2018-03-08 09:04:01</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=cbaf60dc4f3013005d7d121f9310c7c8"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=47aef1584ff013005d7d121f9310c7e5"/>
 </record_update>

@@ -97,7 +97,23 @@
                 <element dependent_value="11" label="域管理" sequence="62" value="63"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="关单摘要" max_length="40" name="u_closed_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="关单摘要" max_length="40" name="u_closed_code" type="string">
+            <choice>
+                <element label="引导/培训/示范" sequence="0" value="1"/>
+                <element label="应用重装" sequence="1" value="2"/>
+                <element label="应用重新配置" sequence="2" value="3"/>
+                <element label="自动恢复" sequence="3" value="4"/>
+                <element label="后端配置" sequence="4" value="5"/>
+                <element label="数据/系统同步" sequence="5" value="6"/>
+                <element label="服务/服务重启" sequence="6" value="7"/>
+                <element label="补丁升级/降级" sequence="7" value="8"/>
+                <element label="重设/开锁/禁用" sequence="8" value="9"/>
+                <element label="硬件/设备交换/修理" sequence="9" value="10"/>
+                <element label="第三方修复" sequence="10" value="11"/>
+                <element label="其他" sequence="11" value="12"/>
+                <element label="重连网线" sequence="12" value="13"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" label="联系电话" max_length="40" name="u_contract_phone" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="工单来源" max_length="40" name="u_contract_type" type="string">
             <choice>
@@ -109,6 +125,13 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="地点" max_length="40" name="u_location" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="等待原因" max_length="40" name="u_pending_reason" type="string">
+            <choice>
+                <element label="等待用户" sequence="0" value="1"/>
+                <element label="等待供应商" sequence="1" value="2"/>
+                <element label="等待备件" sequence="2" value="3"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" choice="1" default="1" label="工单状态" max_length="40" name="u_state" type="string">
             <choice>
                 <element label="新建" sequence="0" value="1"/>
