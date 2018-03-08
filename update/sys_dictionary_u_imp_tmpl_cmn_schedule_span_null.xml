@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="u_imp_tmpl_cmn_schedule_span">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="" extends="sys_import_set_row" table="u_imp_tmpl_cmn_schedule_span">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -26,6 +26,8 @@
         <element/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="Collection">collection</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
@@ -47,15 +49,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>Fayu.xu</sys_created_by>
         <sys_created_on>2018-03-07 08:24:42</sys_created_on>
-        <sys_id>6d1ca4880f3c1f408e6805ace1050ea1</sys_id>
+        <sys_id>b53cfc844f7853005d7d121f9310c73e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>u_imp_tmpl_cmn_schedule_span</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
-        <sys_update_name>sys_dictionary_u_imp_tmpl_cmn_schedule_span_null</sys_update_name>
-        <sys_updated_by>Fayu.xu</sys_updated_by>
-        <sys_updated_on>2018-03-07 08:24:42</sys_updated_on>
+        <sys_update_name>sys_dictionary_u_imp_tmpl_cmn_schedule_span_NULL</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-03-07 09:35:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

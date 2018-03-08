@@ -13,13 +13,13 @@
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>Fayu.xu</sys_created_by>
         <sys_created_on>2018-03-07 08:24:43</sys_created_on>
-        <sys_id>e51ca4880f3c1f408e6805ace1050ecc</sys_id>
+        <sys_id>753cfc844f7853005d7d121f9310c74e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>u_imp_tmpl_cmn_schedule_span</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
         <sys_policy/>
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
-        <sys_update_name>ua_table_licensing_config_e51ca4880f3c1f408e6805ace1050ecc</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_753cfc844f7853005d7d121f9310c74e</sys_update_name>
         <sys_updated_by>Fayu.xu</sys_updated_by>
         <sys_updated_on>2018-03-07 08:24:43</sys_updated_on>
     </ua_table_licensing_config>

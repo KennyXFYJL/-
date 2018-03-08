@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_sogd_ciic_x_sogd_ciic">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="" extends="task" table="x_sogd_ciic_x_sogd_ciic">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -31,6 +31,8 @@
         <element/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="Collection">collection</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
@@ -46,13 +48,13 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass/>
+        <sizeclass>5</sizeclass>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
         <sys_created_on>2018-03-06 06:06:49</sys_created_on>
-        <sys_id>046888c00ff81f408e6805ace1050e9a</sys_id>
+        <sys_id>2d3cbc844f7853005d7d121f9310c7fa</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_sogd_ciic_x_sogd_ciic</sys_name>
         <sys_package display_value="CIIC" source="x_sogd_ciic">dde5891f0f4c1f008e6805ace1050e9e</sys_package>
@@ -60,7 +62,7 @@
         <sys_scope display_value="CIIC">dde5891f0f4c1f008e6805ace1050e9e</sys_scope>
         <sys_update_name>sys_dictionary_x_sogd_ciic_x_sogd_ciic_NULL</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-03-07 05:48:44</sys_updated_on>
+        <sys_updated_on>2018-03-07 09:35:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
