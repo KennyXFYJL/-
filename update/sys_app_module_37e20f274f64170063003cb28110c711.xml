@@ -20,8 +20,6 @@
         <query/>
         <report/>
         <roles>x_sogd_ciic_user</roles>
-        <survey/>
-        <survey_overwrite>false</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>fayu.xu@sogservice.com.cn</sys_created_by>
         <sys_created_on>2018-03-06 06:06:48</sys_created_on>
